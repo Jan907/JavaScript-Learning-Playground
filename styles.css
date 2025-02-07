@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.gridleft {
+    grid-area: 1/1/2/2;
+    background-color: #fff;
+    padding: 12px;
+    border-right: 1px solid #ececec;
+    box-shadow: 1px 0px 2px 0px #ececec;
+}
+
+.gridright {
+    grid-area: 1/2/2/3;
+    padding: 12px;
+}
+
+.description {
+    color: #9f9f99;
+    font-size: 16px;
+    padding: 12px 0px 30px 0px;
+}
+
+.title {
+    font-size: 20px;
+    color: #000;
+    font-weight: 800;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #3086ff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+
+}
+
+/* Form Styling */
+input {
+    margin: 4px 0px 16px 0px;
+}
+
+.topic {
+    margin: 4px 0px 16px 10px;
+    border-radius: 8px;
+    border: 1px solid #ececec;
+    padding: 4px 8px;
+}
+
+fieldset {
+    border: none;
+}
+
+.name, .author, .pages {
+    height: 24px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ececec;
+}
+
