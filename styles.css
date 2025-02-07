@@ -45,6 +45,7 @@ body {
     font-size: 20px;
     color: #000;
     font-weight: 800;
+    padding: 10px 0px;
 }
 
 .header {
@@ -88,3 +89,7 @@ fieldset {
     border: 1px solid #ececec;
 }
 
+.libgrid {
+    display: grid;
+    gap: 12px;
+}

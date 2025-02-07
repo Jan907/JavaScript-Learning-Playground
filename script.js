@@ -29,15 +29,16 @@ function addBookToLibrary(title, author, topic, pages, read, notread) {
 
  //Cycle through array and create visual dom representation
 function displayBooks(title, author, topic, pages, read, notread) {
-    for (let i = 0; i < myLibrary.length; i++) {
+    grid.innerHTML = "";
+    for (let paper of myLibrary) {
         let bookcard = document.createElement("div");
         bookcard.classList.add("card");
         bookcard.style.width = "100px";
         bookcard.style.height = "200px";
         bookcard.style.padding = "12px";
         bookcard.style.borderRadius = "8px";
-        bookcard.style.backgroundColor = "#8c8c8c";
-        bookcard.textContent = `${title}, ${author}, ${topic}, ${pages}, ${read}, ${notread}`;
+        bookcard.style.backgroundColor = "#ececec";
+        bookcard.textContent = `${paper.title}, ${paper.author}, ${paper.topic}, ${paper.pages}, ${paper.read}, ${paper.notread}`;
         //Add book to the grid
         grid.appendChild(bookcard);
     }
@@ -50,12 +51,12 @@ document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevents the page from reloading
 
     //Get the data
-    let title = document.getElementById("name");
-    let author = document.getElementById("author");
-    let topic = document.getElementById("topic");
-    let pages = document.getElementById("pages");
-    let read = document.getElementById("read");
-    let notread = document.getElementById("notread");
+    let title = document.getElementById("name").value;
+    let author = document.getElementById("author").value;
+    let topic = document.getElementById("topic").value;
+    let pages = document.getElementById("pages").value;
+    let read = document.getElementById("read").checked;
+    let notread = document.getElementById("read").checked;
 
     //Add book to the library
     addBookToLibrary(title, author, topic, pages, read, notread);
