@@ -39,7 +39,10 @@ function displayBooks(title, author, topic, pages, read, notread) {
         bookcard.style.borderRadius = "8px";
         bookcard.style.backgroundColor = "#ececec";
         bookcard.textContent = `${paper.title}, ${paper.author}, ${paper.topic}, ${paper.pages}, ${paper.read}, ${paper.notread}`;
+        // ADD A DELETE BUTTON HERE!!!
+        
         //Add book to the grid
+
         grid.appendChild(bookcard);
     }
     
